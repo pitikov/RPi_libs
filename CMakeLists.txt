@@ -12,5 +12,10 @@ add_executable(RPi_libs_test main.cpp)
 target_link_libraries(RPi_libs_test ${PIGPIOD_LIBS} pthread mcp3008)
 target_link_options(RPi_libs_test PUBLIC ${THREADS_PREFER_PTHREAD_FLAG})
 
-install(TARGETS mcp3008 LIBRARY DESTINATION lib)
-install(FILES mcp3008.h DESTINATION include)
+install(TARGETS
+        mcp3008
+    LIBRARY DESTINATION lib)
+
+install(FILES
+        mcp3008.h
+    DESTINATION include)
